@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+    textarea {width:150px; height: 100px}
+    form {width:100%;}
+    button{ width:200px;height:30px;}
+    input[type="text"],input[type="email"],input [type="password"]{width: 150px;height: 30px;margin-bottom: 1px;}
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>FORMULARIOS <style></style></h1>
+
+<ul>
+    <li><a href="Inicio">Inicio</a></li>
+    <li><a href="Nosotros">Nosotros</a></li>
+    <li><a href="Contacto">Contacto</a></li>
+    </ul>
+
+    <!--El Elemento HTML Anchor <a> crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.
+    -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores quasi accusantium minima repellat eveniet cumque. Labore eligendi fugiat vero, dignissimos eius magni debitis perferendis ipsam reiciendis, accusamus necessitatibus ipsum!</p>
+    <h2>Contactenos</h2>
+    <form action="codigo.php" method="post" enctype="multipart/form-data">
+        <!--form action hay que indicar el lenguaje de back end en este caso seria php, method: el mas seguro es "post" para uso de datos,multipart es para agregar archivos adjuntos-->
+        <label>*Nombre:<br><input type="text"required name="nombre" placeholder="Juan" >(obligatorio)</label><br>
+        <label>Apellido:<br><input type="text"name="Apellido" placeholder= "Perez"></label><br>
+        <label>Email:<br><input type="text"name="email" placeholder="info@dominio.com" ></label><br>
+
+        <button>Enviar</button>
+        <!--* y required: significa que el campo es obligatorio de completar-->
+
+        <!--en el formulario el placeholder es obligatorio indica como y con que datos queremos que se llene el formulario-->
+
+        <p>Estado Civil</p>
+        <label><input type="radio" name="estado" value="soltero">soltero</label>
+        <label><input type="radio" name="estado" value="casado">casado</label>
+        <label><input type="radio" name="estado" value="nc">no contesta</label><br>
+        <!--en type radio el name tiene que ser el mismo en todas las opciones, asi con el click solo podra elegir una opcion-->
+
+        <p>Edad</p>
+        <label><input type="number"min="18" max="90"></label>
+        <!-- atributo step=2 si queremos que solo aparezcan nros pares-->
+
+        <p>Nacionalidad</p>
+        <label>Nacionalidad<input type="text"name="Nacionalidad"></label>
+        <select name= "Nacionalidad">
+        
+        <option value="Argentina">Argentina</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Uruguay">Uruguay</option>
+        </select>
+        
+        <p>Telefono</p>
+        <label><input type="tel"name="Telefono"pattern="\d{4}[\-]\d{4}[\-]\d{4}"placeholder=+5411-4444-4444> </label><br>
+
+        <p>Preferencias</p>
+        <label><input type="checkbox" name="preferencias" value="curso HTML">Curso html</label><br>
+        <label><input type="checkbox" name="preferencias" value="curso Maquetado">Curso maquetado</label><br>
+        <label><input type="checkbox" name="preferencias" value="curso Javascript">Curso Javascript</label><br>
+        
+        <!-- en el checkbox se pueden elegir multiples opciones-->
+
+        <p>Agregar archivo adjunto</p>
+        <label>Adjunto:<input type="file"name="archivo" multiple></label><br>
+
+        <p>Crear Contraseña</p>
+        <label>Contraseña<input type="password"name="pass"></label><br>
+
+        <p>Comentario</p>
+        <label>Comentario <textarea></textarea></label><br>
+
+
+        <input type="submit" value="Enviar formulario">
+        <!--"submit"es igual a "button"-->
+
+
+    </form>
+    
+</body>
+
